@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #quiz-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  #question {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  #answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .answer-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .answer-button:hover {
+    background-color: #0056b3;
+  }
+
+  .answer-button.correct {
+    background-color: #28a745;
+  }
+
+  .answer-button.wrong {
+    background-color: #dc3545;
+  }
+
+  #next-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #next-button:hover {
+    background-color: #e0a800;
+  }
+
+  #submit-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #submit-button:hover {
+    background-color: #218838;
+  }
+
+  #score-container {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+  }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>Quiz Application</h1>
+        <div id="question-container">
+          <h2 id="question">Question will appear here</h2>
+          <div id="answers"></div>
+        </div>
+        <button id="next-button" disabled>Next Question</button>
+        <button id="submit-button" hidden>Submit</button>
+        <div id="score-container" hidden>
+          <h2>Your Score: <span id="score"></span></h2>
+        </div>
+      </div>
+      <script src="java1.js"></script>
+</body>
+</html>
